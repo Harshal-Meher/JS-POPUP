@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+    
+        }
+
+        .popup-content {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 80%;
+            z-index: 1000; /* Ensure the popup is on top of other elements */
+        }
+
+        .popup-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #ec0606;
+            cursor: pointer;
+        }
+        
+        /* Additional styles for the course navigation link */
+        .ver-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            background-color: #007bff;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="popup-content showPopup" id="popup">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <h2>We Are Hiring Interns!!!</h2>
+        <div>
+            <img src="1.jpg" alt="hiring">
+            <a href="loading_page.php" target="_blank" class="btn">Apply Now</a>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        setTimeout(showPopup, 2000);
+    </script>
+</body>
+</html>
